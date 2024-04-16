@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+.main{
+  display: flex;
+  margin: 1rem;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.product{
+  height: 300px;
+  width: 200px;
+  margin: 1rem;
+  box-shadow: 1px 1px 1rem rgb(0, 0, 0);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product:hover{
+  cursor: pointer;
+  box-shadow: 1px 1px 1rem rgb(22, 232, 243);
+  transition-duration: 0.4s;
+}
+.image{
+  height: 100px;
+  width: 120px;
+  object-fit: contain;
+}
+
+
+
+nav{
+  box-shadow: 1px 1px 1rem rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  background-color: rgb(33, 31, 31);
+  /* width: 100vw; */
+}
+
+
+
+.carting{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  background-color: rgb(33, 31, 31);
+}
+
+.count{
+  border-radius: 50px;
+  padding: 1px;
+  border: 1px solid rgb(22, 232, 243);
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  color: red;
+}
+.cart{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  box-shadow: 1px 1px 1rem rgb(0, 0, 0);
+  padding: 1rem;
+  box-sizing: border-box;
+  margin: 0.41rem;
+  width: 700px;
+}
+.cartProduct{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid rgb(22, 232, 243); */
+  box-shadow: 1px 1px 7px rgb(0, 0, 0);
+  padding: 0.6rem;
+  margin: 0.6rem;
+  border-radius: 0.4rem;
+}
+.cartItems{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: 300px;
+}
+.cartImage{
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+}
+
+.mainuserprofile{
+  /* height: 0vh; */
+  /* width: 100vw; */
+  padding: 1rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 3rem;
+}
+.inputs{
+ display: flex;
+ justify-content: space-between;
+ gap: 2rem;
+ margin-bottom: 0;
+}
+
+form{
+  /* border: 1px solid aqua; */
+  width: 350px;
+  /* box-shadow: 1px 1px 1rem 1px aqua; */
+  border-radius: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+.secondDiv{
+  width: 300px;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 1rem 1px aqua;
+  padding: 1rem;
+  box-sizing: border-box;
+}
