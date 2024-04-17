@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import { GrCart } from "react-icons/gr";
-import { FaShoppingCart } from "react-icons/fa";
-import Home from "./Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CartMain from "./CartMain";
-import UserProfile from "./UserProfile";
+import CartMain from "./Cart/CartMain";
+import UserProfile from "./UserProfile/UserProfile";
+import Counter from "./Counter/Counter";
 
 function App() {
   return (
@@ -13,13 +10,13 @@ function App() {
       <nav>
         <a href="/cart">Cart</a>
         <a href="/userprofile">User_Profile</a>
-        <a href="/con">Counter</a>
+        <a href="/counter">Counter</a>
       </nav>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/cart" element={<CartMain />} />
           <Route path="/userprofile" element={<UserProfile />} />
+          <Route path="/counter" element={<Counter />} />
         </Routes>
       </BrowserRouter>
     </>

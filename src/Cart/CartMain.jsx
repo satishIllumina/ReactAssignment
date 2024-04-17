@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./App.css";
+import "../App.css";
 import axios from "axios";
 import { GrCart } from "react-icons/gr";
 import { FaShoppingCart } from "react-icons/fa";

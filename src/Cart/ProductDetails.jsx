@@ -23,7 +23,7 @@ const ProductDetails = ({
       <p>price: {product?.price}</p>
       <div>
         {cart.some((item) => item.id === product.id) ? (
-          <button style={{ border: "1px solid rgb(22, 232, 243)" }}>
+          <button style={{ backgroundColor: "aqua", color: "black" }}>
             Added
           </button>
         ) : (

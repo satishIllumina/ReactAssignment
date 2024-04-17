@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./App.css";
+import "../App.css";
 
 function UserProfile() {
   const [formDetails, setFormDetails] = useState({
@@ -40,12 +40,12 @@ function UserProfile() {
     if (!formDetails.email) {
       formErrors.email = "email is required";
     } else if (!emailRegex.test(formDetails.email)) {
-      formErrors.email = "Enter correct email";
+      formErrors.email = "use abc@gmail.com format";
     }
     if (!formDetails.phone) {
       formErrors.phone = "phone is required";
     } else if (!phoneRegex.test(formDetails.phone)) {
-      formErrors.phone = "Enter correct phone";
+      formErrors.phone = "use +91 7979797979 format";
     }
     if (!formDetails.hobbies) {
       formErrors.hobbies = "hobbies is required";
@@ -97,13 +97,7 @@ function UserProfile() {
                     <input
                       name={item}
                       ref={item === "phone" ? phoneFocus : null}
-                      type={
-                        item === "email"
-                          ? "email"
-                          : item === "phone"
-                          ? "tel"
-                          : "text"
-                      }
+                      type="text"
                       value={formDetails[item]}
                       placeholder={`Enter ${item}`}
                       onChange={handleChange}
