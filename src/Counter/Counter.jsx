@@ -19,20 +19,28 @@ function Counter() {
   return (
     <>
       <div className="counterMain">
-        <div className="counterinner">
+        <div className="shadow-lg p-4 m-4 my-8 rounded-lg flex justify-center p-8">
           <button
-            className="subtract"
+            className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
             onClick={decrement}
             disabled={count <= 0}
           >
             subtract
           </button>
-          {count}
-          <button className="add" onClick={increment}>
+          <h1 className=" p-2 py-1 border rounded-lg m-4">{count}</h1>
+          <button
+            className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
+            onClick={increment}
+          >
             add
           </button>
           <div>
-            <button onClick={reset}>reset</button>
+            <button
+              className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
+              onClick={reset}
+            >
+              reset
+            </button>
           </div>
         </div>
       </div>

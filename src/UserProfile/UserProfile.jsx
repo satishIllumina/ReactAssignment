@@ -63,12 +63,15 @@ function UserProfile() {
     <div style={{ height: "100vh" }}>
       <div className="mainuserprofile">
         <form
-          style={{
-            boxShadow:
-              Object.keys(errors).length === 0
-                ? "1px 1px 1rem 1px aqua"
-                : "1px 1px 1rem 1px red",
-          }}
+          // style={{
+          //   boxShadow:
+          //     Object.keys(errors).length === 0 ? "shadow-lg" : "shadow-lg",
+          // }}
+          className={
+            Object.keys(errors).length === 0
+              ? "shadow-lg shadow-cyan-300"
+              : "shadow-lg shadow-red-300"
+          }
           onSubmit={handleSubmit}
         >
           <div>
@@ -115,10 +118,15 @@ function UserProfile() {
                 </p>
               </div>
             ))}
-            <input type="submit" />
+            <button
+              type="submit"
+              className="bg-cyan-500 p-2 py-1 text-white border rounded-lg my-2"
+            >
+              submit
+            </button>
           </div>
         </form>
-        <div className="secondDiv">
+        <div className="secondDiv shadow-lg shadow-cyan-300">
           {
             <div>
               <p>Name : {finalData.name}</p>

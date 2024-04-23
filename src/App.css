@@ -12,18 +12,18 @@
   height: 300px;
   width: 200px;
   margin: 1rem;
-  box-shadow: 1px 1px 1rem rgb(0, 0, 0);
+  /* box-shadow: 1px 1px 1rem rgb(0, 0, 0); */
   border-radius: 1rem;
   padding: 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .product:hover{
   cursor: pointer;
-  box-shadow: 1px 1px 1rem aqua;
+  /* box-shadow: 1px 1px 1rem aqua; */
   transition-duration: 0.4s;
 }
 .image{
@@ -35,7 +35,6 @@
 
 
 nav{
-  box-shadow: 1px 1px 1rem rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,6 +44,7 @@ nav{
   position: sticky;
   top: 0;
   width: 100vw;
+  background-color: white;
 }
 
 .carting{
@@ -56,7 +56,7 @@ nav{
   box-sizing: border-box;
   position: sticky;
   top: 0;
-  background-color: rgb(33, 31, 31);
+  background-color: rgb(255, 255, 255);
 }
 
 .count{
@@ -66,8 +66,8 @@ nav{
   font-size: 10px;
   font-weight: bold;
   position: absolute;
-  bottom: 8px;
-  left: 10px;
+  bottom: 10px;
+  left: 15px;
   color: red;
 }
 .cart{
@@ -75,7 +75,8 @@ nav{
   flex-direction: column;
   justify-content: center;
   align-self: center;
-  box-shadow: 1px 1px 1rem rgb(0, 0, 0);
+  box-shadow: 0px 0px 1rem rgb(0, 0, 0);
+  border-radius: 5px;
   padding: 1rem;
   box-sizing: border-box;
   margin: 0.41rem;
@@ -122,7 +123,7 @@ nav{
 
 form{
   /* border: 1px solid aqua; */
-  width: 350px;
+  width: 370px;
   /* box-shadow: 1px 1px 1rem 1px aqua; */
   border-radius: 1rem;
   padding: 1rem;
@@ -150,3 +151,4 @@ form{
   display: flex;
   justify-content: center;
 }
+

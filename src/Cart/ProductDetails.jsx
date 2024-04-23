@@ -23,11 +23,16 @@ const ProductDetails = ({
       <p>price: {product?.price}</p>
       <div>
         {cart.some((item) => item.id === product.id) ? (
-          <button style={{ backgroundColor: "aqua", color: "black" }}>
+          <button className="bg-cyan-600 p-2 py-1 text-white border rounded-lg">
             Added
           </button>
         ) : (
-          <button onClick={addToCart}>Add to Cart</button>
+          <button
+            className="transition ease-in-out delay-150 border-2 border-black  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 hover:bg-blue-700 hover:border-0 hover:text-white text-black py-1 px-2 rounded"
+            onClick={addToCart}
+          >
+            Add to Cart
+          </button>
         )}
       </div>
     </>

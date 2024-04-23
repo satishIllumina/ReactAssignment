@@ -46,8 +46,8 @@ function CartMain() {
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div className="cart">
             <h1 style={{ textAlign: "center" }}>Cart</h1>
-            {cart?.map((product, i) => (
-              <div key={i}>
+            {cart?.map((product) => (
+              <div key={product.id}>
                 <Cart
                   setDeletedItem={setDeletedItem}
                   cart={cart}
@@ -58,20 +58,26 @@ function CartMain() {
                 />
               </div>
             ))}
-            <h2 style={{ textAlign: "center", padding: "1rem" }}>
+            <h2
+              className="text-stone-500"
+              style={{ textAlign: "center", padding: "1rem" }}
+            >
               Total Price : Rs. {totalPrice}/-
             </h2>
           </div>
         </div>
       )}
       {loader ? (
-        <h1>Loading...</h1>
+        <h1 style={{ textAlign: "center" }}>Loading...</h1>
       ) : (
         <div>
-          <h1 style={{ textAlign: "center" }}>Products</h1>
-          <div className="main">
+          <h1 className="text-2xl text-center font-bold ">Products</h1>
+          <div className=" main">
             {products?.map((product) => (
-              <div className="product" key={product.id}>
+              <div
+                className="shadow-lg black product hover:shadow-cyan-300"
+                key={product.id}
+              >
                 <ProductDetails
                   deletedItem={deletedItem}
                   setDeletedItem={setDeletedItem}
