@@ -61,15 +61,11 @@ function UserProfile() {
 
   return (
     <div style={{ height: "100vh" }}>
-      <div className="mainuserprofile">
+      <div className="sm:flex sm:gap-8 flex-row gap-8 justify-center m-8">
         <form
-          // style={{
-          //   boxShadow:
-          //     Object.keys(errors).length === 0 ? "shadow-lg" : "shadow-lg",
-          // }}
           className={
             Object.keys(errors).length === 0
-              ? "shadow-lg shadow-cyan-300"
+              ? "shadow-lg"
               : "shadow-lg shadow-red-300"
           }
           onSubmit={handleSubmit}
@@ -126,7 +122,7 @@ function UserProfile() {
             </button>
           </div>
         </form>
-        <div className="secondDiv shadow-lg shadow-cyan-300">
+        <div className="secondDiv shadow-lg">
           {
             <div>
               <p>Name : {finalData.name}</p>

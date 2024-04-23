@@ -7,6 +7,7 @@
   margin: 1rem;
   flex-wrap: wrap;
   box-sizing: border-box;
+  justify-content: center;
 }
 .product{
   height: 300px;
@@ -108,7 +109,7 @@ nav{
   /* height: 0vh; */
   /* width: 100vw; */
   padding: 1rem;
-  display: flex;
+  /* display: flex; */
   gap: 5rem;
   justify-content: center;
   box-sizing: border-box;
@@ -132,7 +133,7 @@ form{
   align-items: center;
 }
 .secondDiv{
-  width: 300px;
+  width: 370px;
   border-radius: 1rem;
   box-shadow: 1px 1px 1rem aqua;
   padding: 1rem;
