@@ -72,7 +72,7 @@ function CartMain() {
       ) : (
         <div>
           <h1 className="text-2xl text-center font-bold ">Products</h1>
-          <div className=" main">
+          <div className="grid grid-cols-2 md:grid-cols-4 justify-items-center">
             {products?.map((product) => (
               <div
                 className="shadow-lg black product hover:shadow-cyan-300"

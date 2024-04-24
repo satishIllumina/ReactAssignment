@@ -127,14 +127,12 @@ function UserProfile() {
           </div>
         </form>
         <div className="secondDiv shadow-lg">
-          {
-            <div className="flex space-y-0">
-              <p>Name : {finalData.name}</p>
-              <p>Email: {finalData.email}</p>
-              <p>Phone: {finalData.phone}</p>
-              <p>Hobbies: {finalData.hobbies}</p>
-            </div>
-          }
+          <div className="flex-row justify-content-between">
+            <p>Name : {finalData.name}</p>
+            <p>Email: {finalData.email}</p>
+            <p>Phone: {finalData.phone}</p>
+            <p>Hobbies: {finalData.hobbies}</p>
+          </div>
         </div>
       </div>
     </div>
