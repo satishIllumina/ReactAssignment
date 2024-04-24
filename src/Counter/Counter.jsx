@@ -21,7 +21,11 @@ function Counter() {
       <div className="counterMain">
         <div className="shadow-lg p-4 m-4 my-8 rounded-lg flex justify-center p-8">
           <button
-            className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
+            className={
+              count <= 0
+                ? "bg-cyan-600 opacity-50 p-2 py-1 text-white border rounded-lg m-4"
+                : "bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
+            }
             onClick={decrement}
             disabled={count <= 0}
           >

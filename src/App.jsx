@@ -6,7 +6,7 @@ import Counter from "./Counter/Counter";
 import { useState } from "react";
 
 function App() {
-  const [isClicked, setIsClicked] = useState("");
+  const [isClicked, setIsClicked] = useState("cart");
   return (
     <>
       <BrowserRouter>
