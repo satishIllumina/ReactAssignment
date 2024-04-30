@@ -61,12 +61,12 @@ function UserProfile() {
 
   return (
     <div style={{ height: "70vh" }}>
-      <div className="sm:flex sm:gap-8 flex-row gap-8 justify-center m-8">
+      <div className="sm:flex sm:gap-8 flex-row gap-8 text-xs sm:text-base  justify-center m-8 align-middle">
         <form
           className={
             Object.keys(errors).length === 0
-              ? "shadow-lg"
-              : "shadow-lg shadow-red-300"
+              ? "shadow-lg flex gap-8 p-4 rounded-lg"
+              : "shadow-lg shadow-red-300 p-4 mt-4 rounded-lg"
           }
           onSubmit={handleSubmit}
         >

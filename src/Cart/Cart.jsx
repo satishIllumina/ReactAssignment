@@ -42,12 +42,12 @@ const Cart = ({
       <div className="cartProduct shadow-lg black">
         <div className="cartItems w-8 md:w-20 mr-12">
           <img className="cartImage" src={product?.images[0]} alt="" />
-          <p className="text-xs md:text-base font-bold">{product.title}</p>
+          <p className="text-xs sm:text-base font-bold">{product.title}</p>
         </div>
         <div className="">
           <button
             onClick={() => product?.quantity >= 2 && productQuantityDecrement()}
-            className="p-2 py-1 border-r-2 bg-gray-200 rounded-l-lg"
+            className="p-2 py-1 border-r-2 bg-gray-200 rounded-l"
           >
             {product?.quantity <= 1 ? (
               <button onClick={productDelete}>
@@ -59,13 +59,15 @@ const Cart = ({
           </button>
           <span className="p-2 py-1 border w-4">{product?.quantity}</span>
           <button
-            className=" p-2 py-1 border-l-2 bg-gray-200 rounded-r-lg"
+            className=" p-2 py-1 border-l-2 bg-gray-200 rounded-r"
             onClick={() => productQuantityIncrement()}
           >
             +
           </button>
         </div>
-        <p>Rs. {product?.quantity * product.price}/-</p>
+        <p className="text-xs sm:text-sm">
+          Rs. {product?.quantity * product.price}/-
+        </p>
         <button onClick={productDelete}>
           <MdDeleteOutline />
         </button>

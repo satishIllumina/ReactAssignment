@@ -31,12 +31,12 @@ function Counter() {
   return (
     <>
       <div className="counterMain font-bold">
-        <div className="shadow-lg p-4 m-4 my-8 rounded-lg flex justify-center p-8">
+        <div className="shadow-lg p-2 sm:p-8 m-4 my-8 rounded-lg flex justify-center">
           <button
             className={
               count <= 0
-                ? "bg-cyan-600 opacity-50 p-2 py-1 text-white border rounded-lg m-4"
-                : "bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
+                ? "bg-cyan-600 opacity-50 p-2 py-1 text-white border rounded-lg m-2 sm:m-4"
+                : "bg-cyan-600 p-2 py-1 text-white border rounded-lg m-2 sm:m-4"
             }
             style={{ backgroundColor: colorDec }}
             onClick={decrement}
@@ -44,9 +44,9 @@ function Counter() {
           >
             Decrement
           </button>
-          <h1 className=" p-2 py-1 border rounded-lg m-4">{count}</h1>
+          <h1 className=" p-2 py-1 border rounded-lg m-2 sm:m-4">{count}</h1>
           <button
-            className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
+            className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-2 sm:m-4"
             style={{ backgroundColor: colorInc }}
             onClick={increment}
           >
@@ -54,7 +54,7 @@ function Counter() {
           </button>
           <div>
             <button
-              className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
+              className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-2 sm:m-4"
               onClick={reset}
               style={{ backgroundColor: colorReset }}
             >

@@ -40,7 +40,7 @@ nav{
   box-sizing: border-box;
   position: sticky;
   top: 0;
-  width: 100vw;
+  width: 100%;
   background-color: white;
 }
 
@@ -119,18 +119,8 @@ nav{
  margin-bottom: 0;
 }
 
-form{
-  /* border: 1px solid aqua; */
-  width: 370px;
-  /* box-shadow: 1px 1px 1rem 1px aqua; */
-  border-radius: 1rem;
-  padding: 1rem;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-}
 .secondDiv{
-  width: 370px;
+  width: 100%;
   border-radius: 1rem;
   /* box-shadow: 1px 1px 1rem aqua; */
   padding: 1rem;
