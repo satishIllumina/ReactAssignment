@@ -60,7 +60,7 @@ function UserProfile() {
   }, [errors]);
 
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "70vh" }}>
       <div className="sm:flex sm:gap-8 flex-row gap-8 justify-center m-8">
         <form
           className={
@@ -73,13 +73,13 @@ function UserProfile() {
           <div>
             {Object.keys(formDetails).map((item, i) => (
               <div key={i}>
-                <div className="inputs">
-                  <label className="my-4">
+                <div className="inputs ">
+                  <label className="my-4 font-bold">
                     {item}
                     <span style={{ color: "red" }}>*</span> :
                   </label>
                   <div
-                    className=""
+                    className="border-white"
                     style={{ display: item === "phone" ? "flex" : "block" }}
                   >
                     <select
@@ -90,7 +90,7 @@ function UserProfile() {
                         });
                         phoneFocus.current.focus();
                       }}
-                      className="py-1"
+                      className="border-0 border-white border-hidden"
                       style={{ display: item === "phone" ? "inline" : "none" }}
                     >
                       <option value={"+91 "}>IND</option>
@@ -123,7 +123,7 @@ function UserProfile() {
             ))}
             <button
               type="submit"
-              className="bg-cyan-500 p-2 py-1 text-white border rounded-lg my-2"
+              className="bg-cyan-500 p-2 py-1 text-white border rounded-lg my-2 font-bold"
             >
               submit
             </button>
@@ -131,10 +131,18 @@ function UserProfile() {
         </form>
         <div className="secondDiv shadow-lg">
           <div className="flex-row justify-content-between">
-            <p>Name : {finalData.name}</p>
-            <p>Email: {finalData.email}</p>
-            <p>Phone: {finalData.phone}</p>
-            <p>Hobbies: {finalData.hobbies}</p>
+            <h1 className="font-bold">{finalData.name}</h1>
+            <hr />
+            <br />
+            <h1 className="font-bold">
+              Email: <span className="font-normal">{finalData.email}</span>
+            </h1>
+            <h1 className="font-bold">
+              Phone: <span className="font-normal">{finalData.phone}</span>
+            </h1>
+            <h1 className="font-bold">
+              Hobbies: <span className="font-normal">{finalData.hobbies}</span>
+            </h1>
           </div>
         </div>
       </div>

@@ -2,16 +2,12 @@
   box-sizing: border-box;
 }
 
-/* .main{
-  display: flex;
-  margin: 1rem;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  justify-content: center;
-} */
+.main{
+  background-image: url("https://wallpaperboat.com/wp-content/uploads/2019/10/best-background-for-website-01-920x518.jpg");
+}
 .product{
   height: 280px;
-  width: 170px;
+  width: 180px;
   margin: 1rem;
   /* box-shadow: 1px 1px 1rem rgb(0, 0, 0); */
   border-radius: 1rem;
@@ -28,8 +24,8 @@
   transition-duration: 0.4s;
 }
 .image{
-  height: 100px;
-  width: 120px;
+  height: 160px;
+  width: 180px;
   object-fit: contain;
 }
 
@@ -100,9 +96,10 @@ nav{
   width: 300px;
 }
 .cartImage{
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   object-fit: contain;
+  box-sizing: border-box;
 }
 
 .mainuserprofile{

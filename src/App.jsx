@@ -15,8 +15,8 @@ function App() {
             onClick={() => setIsClicked("cart")}
             className={
               isClicked === "cart"
-                ? "bg-cyan-500 p-2 py-1 text-white border rounded-lg"
-                : ""
+                ? "bg-cyan-500 p-2 py-1 text-white border rounded-lg font-bold"
+                : "font-bold"
             }
             to="/"
           >
@@ -27,8 +27,8 @@ function App() {
             to="/userprofile"
             className={
               isClicked === "userprofile"
-                ? "bg-cyan-500 p-2 py-1 text-white border rounded-lg"
-                : ""
+                ? "bg-cyan-500 p-2 py-1 text-white border rounded-lg font-bold"
+                : "font-bold"
             }
           >
             User_Profile
@@ -38,8 +38,8 @@ function App() {
             to="/counter"
             className={
               isClicked === "counter"
-                ? "bg-cyan-500 p-2 py-1 text-white border rounded-lg"
-                : ""
+                ? "bg-cyan-500 p-2 py-1 text-white border rounded-lg font-bold"
+                : "font-bold"
             }
           >
             Counter

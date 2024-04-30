@@ -42,7 +42,7 @@ const Cart = ({
       <div className="cartProduct shadow-lg black">
         <div className="cartItems w-8 md:w-20 mr-12">
           <img className="cartImage" src={product?.images[0]} alt="" />
-          <p className="text-xs md:text-base">{product.title}</p>
+          <p className="text-xs md:text-base font-bold">{product.title}</p>
         </div>
         <div className="">
           <button

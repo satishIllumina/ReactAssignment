@@ -3,6 +3,7 @@ import "../App.css";
 
 function Counter() {
   const [count, setCount] = useState(0);
+  const [color, setColor] = useState("cyan");
 
   const increment = () => {
     setCount(count + 1);
@@ -10,6 +11,7 @@ function Counter() {
 
   const decrement = () => {
     setCount(count - 1);
+    setColor("red");
   };
 
   const reset = () => {
@@ -18,7 +20,7 @@ function Counter() {
 
   return (
     <>
-      <div className="counterMain">
+      <div className="counterMain font-bold">
         <div className="shadow-lg p-4 m-4 my-8 rounded-lg flex justify-center p-8">
           <button
             className={
@@ -29,14 +31,14 @@ function Counter() {
             onClick={decrement}
             disabled={count <= 0}
           >
-            subtract
+            Decrement
           </button>
           <h1 className=" p-2 py-1 border rounded-lg m-4">{count}</h1>
           <button
             className="bg-cyan-600 p-2 py-1 text-white border rounded-lg m-4"
             onClick={increment}
           >
-            add
+            Increment
           </button>
           <div>
             <button

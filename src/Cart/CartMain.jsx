@@ -45,7 +45,7 @@ function CartMain() {
       {cartOpen && (
         <div style={{ display: "flex", justifyContent: "center" }}>
           <div className="cart">
-            <h1 style={{ textAlign: "center" }}>Cart</h1>
+            <h1 className="text-center font-bold">Cart</h1>
             {cart?.map((product) => (
               <div key={product.id}>
                 <Cart
@@ -58,10 +58,7 @@ function CartMain() {
                 />
               </div>
             ))}
-            <h2
-              className="text-stone-500"
-              style={{ textAlign: "center", padding: "1rem" }}
-            >
+            <h2 className="text-stone-500 text-center font-bold p-2">
               Total Price : Rs. {totalPrice}/-
             </h2>
           </div>
@@ -70,14 +67,11 @@ function CartMain() {
       {loader ? (
         <h1 style={{ textAlign: "center" }}>Loading...</h1>
       ) : (
-        <div>
+        <div className="scroll-smooth">
           <h1 className="text-2xl text-center font-bold ">Products</h1>
           <div className="grid grid-cols-2 md:grid-cols-5 justify-items-center">
             {products?.map((product) => (
-              <div
-                className="shadow-lg black product hover:shadow-cyan-300"
-                key={product.id}
-              >
+              <div className="" key={product.id}>
                 <ProductDetails
                   deletedItem={deletedItem}
                   setDeletedItem={setDeletedItem}
