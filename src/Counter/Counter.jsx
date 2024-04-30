@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../App.css";
 
 function Counter() {
@@ -6,6 +6,12 @@ function Counter() {
   const [colorDec, setColorDec] = useState("");
   const [colorInc, setColorInc] = useState("");
   const [colorReset, setColorReset] = useState("");
+
+  const settingtime = setTimeout(() => {
+    setColorInc("");
+    setColorDec("");
+    setColorReset("");
+  }, 1000);
 
   const increment = () => {
     setCount(count + 1);
@@ -27,6 +33,8 @@ function Counter() {
     setColorDec("");
     setColorReset("black");
   };
+
+  useEffect(() => clearTimeout(settingtime), []);
 
   return (
     <>
