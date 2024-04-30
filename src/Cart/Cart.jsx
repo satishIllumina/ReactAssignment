@@ -47,7 +47,7 @@ const Cart = ({
         <div className="">
           <button
             onClick={() => product?.quantity >= 2 && productQuantityDecrement()}
-            className="p-1 py-0 md:p-2 md:py-1 border-r-2 bg-gray-200 rounded-l-lg"
+            className="p-2 py-1 border-r-2 bg-gray-200 rounded-l-lg"
           >
             {product?.quantity <= 1 ? (
               <button onClick={productDelete}>
@@ -57,11 +57,9 @@ const Cart = ({
               "-"
             )}
           </button>
-          <span className="p-1 py-0 md:p-2 md:py-1 border w-4">
-            {product?.quantity}
-          </span>
+          <span className="p-2 py-1 border w-4">{product?.quantity}</span>
           <button
-            className=" p-1 py-0 md:p-2 md:py-1 border-l-2 bg-gray-200 rounded-r-lg"
+            className=" p-2 py-1 border-l-2 bg-gray-200 rounded-r-lg"
             onClick={() => productQuantityIncrement()}
           >
             +
