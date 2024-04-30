@@ -78,7 +78,13 @@ function UserProfile() {
                     {item}
                     <span style={{ color: "red" }}>*</span> :
                   </label>
-                  <div style={{ display: item === "phone" ? "flex" : "block" }}>
+                  <div
+                    style={{
+                      display: item === "phone" ? "flex" : "block",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
                     <select
                       onChange={(e) => {
                         setFormDetails({
@@ -87,7 +93,7 @@ function UserProfile() {
                         });
                         phoneFocus.current.focus();
                       }}
-                      className="border-0 border-white border-hidden"
+                      className="h-7"
                       style={{ display: item === "phone" ? "inline" : "none" }}
                     >
                       <option value={"+91 "}>IND</option>
@@ -95,7 +101,7 @@ function UserProfile() {
                     </select>
 
                     <input
-                      class="my-3 block w-full px-2 py-1 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                      class="my-3 block w-full p-1 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                     "
                       name={item}
