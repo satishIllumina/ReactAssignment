@@ -115,7 +115,7 @@ nav{
 .inputs{
  display: flex;
  justify-content: space-between;
- gap: 2rem;
+ gap: 1rem;
  margin-bottom: 0;
 }
 

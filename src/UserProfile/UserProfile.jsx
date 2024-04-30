@@ -78,10 +78,7 @@ function UserProfile() {
                     {item}
                     <span style={{ color: "red" }}>*</span> :
                   </label>
-                  <div
-                    className="border-white"
-                    style={{ display: item === "phone" ? "flex" : "block" }}
-                  >
+                  <div style={{ display: item === "phone" ? "flex" : "block" }}>
                     <select
                       onChange={(e) => {
                         setFormDetails({
