@@ -61,11 +61,14 @@ function UserProfile() {
 
   return (
     <div style={{ height: "70vh" }}>
-      <div className="sm:flex sm:gap-8 flex-row gap-8 text-xs sm:text-base  justify-center m-8 align-middle">
+      <div
+        className="sm:flex sm:gap-8 flex-row
+       gap-8 text-xs sm:text-base justify-center m-8 align-middle"
+      >
         <form
           className={
             Object.keys(errors).length === 0
-              ? "shadow-lg flex gap-8 p-4 rounded-lg"
+              ? "shadow-lg flex gap-8 p-4 rounded-lg w-full sm:w-max"
               : "shadow-lg shadow-red-300 p-4 mt-4 rounded-lg"
           }
           onSubmit={handleSubmit}
@@ -101,7 +104,7 @@ function UserProfile() {
                     </select>
 
                     <input
-                      class="my-3 block w-full p-1 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                      class="my-3 block p-1 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                     "
                       name={item}
@@ -132,7 +135,7 @@ function UserProfile() {
             </button>
           </div>
         </form>
-        <div className="secondDiv shadow-lg">
+        <div className="secondDiv shadow-lg w-full sm:w-64">
           <div className="flex-row justify-content-between">
             <h1 className="font-bold">{finalData.name}</h1>
             <hr />

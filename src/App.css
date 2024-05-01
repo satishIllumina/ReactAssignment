@@ -119,12 +119,9 @@ nav{
  margin-bottom: 0;
 }
 
-form{
-  width: 320px;
-}
 
 .secondDiv{
-  width: 320px;
+  /* width: 100%; */
   border-radius: 1rem;
   /* box-shadow: 1px 1px 1rem aqua; */
   padding: 1rem;
