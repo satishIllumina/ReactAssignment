@@ -68,7 +68,7 @@ function UserProfile() {
         <form
           className={
             Object.keys(errors).length === 0
-              ? "shadow-lg flex gap-8 p-4 rounded-lg w-full sm:w-max"
+              ? "shadow-lg flex gap-8 p-4 rounded-lg w-max"
               : "shadow-lg shadow-red-300 p-4 mt-4 rounded-lg"
           }
           onSubmit={handleSubmit}
@@ -135,7 +135,7 @@ function UserProfile() {
             </button>
           </div>
         </form>
-        <div className="secondDiv shadow-lg w-full sm:w-64">
+        <div className="secondDiv shadow-lg w-64">
           <div className="flex-row justify-content-between">
             <h1 className="font-bold">{finalData.name}</h1>
             <hr />
