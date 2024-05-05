@@ -9,7 +9,7 @@ function UserProfile() {
     hobbies: "",
   });
 
-  const [finalData, setFinalData] = useState({});
+  const [finalData, setFinalData] = useState([]);
   const phoneFocus = useRef();
 
   // const [countryCode,setCountryCode] = useState("")
@@ -24,6 +24,15 @@ function UserProfile() {
   const handleSubmit = (e) => {
     e.preventDefault();
     validate();
+    if (Object.keys(errors).length === 0 && formDetails.name) {
+      setFinalData([...finalData, formDetails]);
+      setFormDetails({
+        name: "",
+        email: "",
+        phone: "+91 ",
+        hobbies: "",
+      });
+    }
   };
 
   const validate = () => {
@@ -53,18 +62,9 @@ function UserProfile() {
     setErrors(formErrors);
   };
 
-  useEffect(() => {
-    if (Object.keys(errors).length === 0) {
-      setFinalData(formDetails);
-    }
-  }, [errors]);
-
   return (
-    <div style={{ height: "70vh" }}>
-      <div
-        className="sm:flex sm:gap-8 flex-row
-       gap-8 text-xs sm:text-base justify-center m-8 align-middle"
-      >
+    <div>
+      <div className="flex text-xs sm:text-sm justify-center mt-8 mb-4 align-middle">
         <form
           className={
             Object.keys(errors).length === 0
@@ -104,7 +104,7 @@ function UserProfile() {
                     </select>
 
                     <input
-                      class="my-3 block p-1 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                      class="my-3 block p-1 bg-white border border-slate-300 rounded-md text-xs shadow-sm placeholder-slate-400
                       focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
                     "
                       name={item}
@@ -135,22 +135,26 @@ function UserProfile() {
             </button>
           </div>
         </form>
-        <div className="secondDiv shadow-lg w-64">
-          <div className="flex-row justify-content-between">
-            <h1 className="font-bold">{finalData.name}</h1>
-            <hr />
-            <br />
-            <h1 className="font-bold">
-              Email: <span className="font-normal">{finalData.email}</span>
-            </h1>
-            <h1 className="font-bold">
-              Phone: <span className="font-normal">{finalData.phone}</span>
-            </h1>
-            <h1 className="font-bold">
-              Hobbies: <span className="font-normal">{finalData.hobbies}</span>
-            </h1>
+      </div>
+      <div className="flex gap-4 text-xs sm:text-base justify-center m-8 align-middle flex-wrap">
+        {finalData?.map((data, i) => (
+          <div key={i} className="secondDiv shadow-lg w-64 ">
+            <div className="flex-row justify-content-between">
+              <h1 className="font-bold">{data.name}</h1>
+              <hr />
+              <br />
+              <h1 className="font-bold">
+                Email: <span className="font-normal">{data.email}</span>
+              </h1>
+              <h1 className="font-bold">
+                Phone: <span className="font-normal">{data.phone}</span>
+              </h1>
+              <h1 className="font-bold">
+                Hobbies: <span className="font-normal">{data.hobbies}</span>
+              </h1>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

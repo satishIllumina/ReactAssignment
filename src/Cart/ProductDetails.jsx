@@ -17,12 +17,14 @@ const ProductDetails = ({
   useEffect(() => {}, [deletedItem]);
 
   return (
-    <div className="shadow-lg hover:duration-500 hover:shadow-cyan-700 m-4 flex flex-col justify-between items-center h-72 rounded-lg cursor-pointer ">
+    <div className=" shadow-lg hover:duration-500 hover:shadow-cyan-700 m-4 flex flex-col items-center rounded-lg cursor-pointer ">
       <img className="image " src={product?.images[0]} alt="" />
       <div className="flex flex-col justify-between items-center m-4">
-        <p className="text-xs sm:text-sm font-bold">{product?.title}</p>
+        <p className="text-xs text-nowrap sm:text-sm font-bold">
+          {product?.title}
+        </p>
         <p className="text-xs sm:text-sm mb-4">price: Rs.{product?.price}/-</p>
-        <div>
+        <div className="">
           {cart.some((item) => item.id === product.id) ? (
             <button className="bg-cyan-600 px-2 py-1 text-white text-xs sm:text-sm border rounded font-bold">
               Added

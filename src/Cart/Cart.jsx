@@ -46,11 +46,14 @@ const Cart = ({
         </div>
         <div className="">
           <button
-            onClick={() => product?.quantity >= 2 && productQuantityDecrement()}
+            onClick={() => {
+              product?.quantity >= 2 && productQuantityDecrement();
+              product?.quantity <= 1 && productDelete();
+            }}
             className="p-1 sm:p-2 border-r-2 bg-gray-200 rounded-l"
           >
             {product?.quantity <= 1 ? (
-              <button onClick={productDelete}>
+              <button>
                 <MdDeleteOutline />
               </button>
             ) : (
